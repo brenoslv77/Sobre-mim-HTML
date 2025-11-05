@@ -1,0 +1,206 @@
+<!--aqui definimos o tipo de documento-->
+    <!DOCTYPE html> 
+    <html lang="pt-BR">
+
+<!-- a tag head é utilizada para configurar a nossa pagina-->
+    <head>
+    <meta charset="utf-8"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css"/>
+
+    <title>Quem sou eu</title>
+<!-- titulo da pagina, exibido na guia da site -->
+
+<!-- <h1>titulo com h1</h1>
+<h2>titulo com h2</h2>
+<h3>titulo com h3</h3>
+<h4>titulo com h4</h4>
+<h5>titulo com h5</h5
+<h6>titulo com h6</h6> -->
+<!-- as tag de h são para titulos e elas define a importancia, o peso,
+daquele titulo dentro da pagina,eles variam enre h1 e h6,
+onde o h1 é o mais mportante e o h6 é o menos importante -->
+    </head>
+       
+    <boby>
+<!-- a tag body é usada para trazer as informações que vão aparecer dentro do site -->
+
+    <header>
+<!-- cabeçalho -->
+    <h1> Quem sou Eu? </h1> 
+    <h3>Uma pagina simples para eu me apresentar ao mundo.</h3>
+<!-- a tag <p></p> serve para criar um paragrafo dentro da pagina -->
+    </header>
+
+    <!-- Navegação -->
+    <nav>
+        <ul>
+        <li><a href="#sobre-mim">Sobre mim</a></li>
+        <li><a href="#interreses">Interreses</a></li>
+        <li><a href="#objetivos">Objetivos</a></li>
+        <li><a href="#contatos">Contatos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#redes-sociais">Redes Sociais</a></li>
+        </ul>   
+    </nav>
+
+    <main>
+<!-- corpo -->
+            <section id= "sobre-mim">
+            <h2> Sobre mim </h2>
+<!-- a tag de img serve para adicionar imagens ano nosso site ela vem com duas propriedades:
+src ==> serve para mostrar o caminho da imagem
+alt ==> é a descrição desta imagem -->
+
+            <img 
+            src="https://images7.memedroid.com/images/UPLOADED710/66b915bdebcb7.jpeg" 
+            alt="Mulher sorrindo em ambiente corporativo."
+            width="250"
+
+            <p>
+<!-- a tag strong serve para destacar uma palavra -->
+<!-- a tag br serve para quebrar linha -->
+            <br/> Olá! Eu sou <strong>Breno</strong> e adoro aprender Sobre tecnologia. <br/> Acredito que programar é uma forma
+            de contar histórias e resolver problemas do mundo real. <br/> Nesta páginas, você vai conhecer um pouco mais sobre mim.
+            </p>
+        </section>
+
+        <section id="interreses">
+            <h2>Interreses</h2>
+            <p>Algumas coisas me fazem brilhar os olhos.</p>
+<!-- Para criar listas podemos usar as seuintes tags:
+ul ==> listas sem ordem
+ol ==> listas ordenadas
+Cada item dentro de uma lista precisa vir dentro de uma tag li -->
+            <ul>
+            <li> Programação de JS </li>
+            <li>Arduino</li>
+            <li>Fluxograma</li>
+            <li>Projetos reais</li>
+            <li>Projetos de baixos custo usando automação</li>
+            </ul>
+        </section>
+
+        <section id="objetivos">
+            <h2> Objetivos </h2>
+            <p> Metas para os proxímos meses </p>
+            <li> Aprender a desenvolver sites usando HTML, CSS e JS</li>
+            <li> Aprender automação usando ESP32 </li>
+            <li> Aprender redes com cabeamentos estruturados </li>
+        </section>
+
+    
+        <section id="contatos">
+            <h2>Contatos</h2>
+            <p>Preencha o formulário para falar comigo:</p>
+<!-- A tag <form> cria um formulário que pode ser usado para coletar informações do usuário.
+O atributo "action" define para onde os dados serão enviados, como ainda não temos isso definido deixamos como "#".
+O atributo "method" define como os dados serão enviados, o "post" é o mais comum e significa que esses dados vão ser salvos em algum local. -->
+            <form id="form" onsubmit="enviarFormulario(event);">
+<!-- A tag <label> serve para descrever o campo, ou seja, criar uma legenda 
+o atributo "for" deve ser sempre ter o mesmo valor que o "id" docampo que ela descreve 
+isso faz com que a acessibilidade do fique melhor, porque ao clicar em texto,
+o campo de digitalção é selecionado -->
+                    <label for="nome">Nome: </label>
+<!-- 
+A tag <input> cria um campo de entrada, uma caixa para o usuario digitar algo.
+O type serve para indicar qual o tipo de valor que o campo vai receber.
+O name é o nome da informação que vai ser enviada no formulário.
+O id é o identificador UNICO usado para vincular o campo com o <label>.
+O required faz com que o campo seja obrigatório para o envio.
+-->
+                    <input type="text" name="nome" id="nome">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" required>
+                    <label for="mensagem">Mensagem:</label>
+<!-- 
+A tag <textarea> cria uma área de texto maior,
+permitindo que o usuário digite mensagens longas (como observações ou comentários).
+Diferente do <input type="text">, que aceita apenas uma linha,
+o <textarea> aceita várias linhas de texto.
+-->
+                    <textarea             
+                        name="mensagem"
+                        id="mensagem"
+                        rows="4"
+                        cols="30"
+                        required
+                    ></textarea>
+                    
+                    <p id="resposta"></p>
+                    <button type="submit">Enviar mensagem</button>
+            </form>
+        </section>
+
+        <section id="habilidades">
+<!-- A tag <table> cria uma tabela para organizar dados em linhas e colunas.
+O atributo border é usado apenas para mostrar as bordas de forma simples -->
+        <table border="1">
+
+<!-- A tag <caption> define o título da tabela.
+Ela aparece logo acima e serve para descrever o conteúdo da tabela. -->
+        <caption>Minhas Habilidades</caption>
+
+<!-- O elemento <thead> agrupa as linhas que formam o cabeçalho da tabela.
+Dentro dele, usamos <tr> para criar uma linha e <th> (table header) 
+para definir as células do cabeçalho-->
+        <thead>
+
+<!-- cada <tr> cria uma linha na tabela -->
+            <tr>
+
+<!-- Cada <th> representa o título de uma coluna -->
+                <th>Linguagem</th>
+                <th>Principais conteúdos</th>
+                <th>Nível de dificuldade</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr>
+            <td>HTML</td>
+                <td> Estrutura de páginas, tags, links, listas,
+                formulários e tabelas </td>
+                <td>Dificil ☠️</td>
+            </tr>
+
+            <tr> 
+                <td> CSS </td>
+                <td> Cores, fontes, layouts, responsividade e animações simples </td>
+                <td> Dificil 😩</td>
+            </tr>
+
+            <tr> 
+                <td> Java Script </td>
+                <td> Vaariaveis, funções, eventos, condicionais e manipulação de DOM </td>
+                <td> Dificil 😥</td>
+            </tr>
+
+            <tr>
+                <td> C++ </td>
+                <td> Variaveis, estruturas, de controles e funções </td>
+                <td> Dificil 😭</td>
+            </tr>
+            </tbody>
+            </table>
+      </section>
+
+      <section id="redes-sociais"> 
+        <h2> Redes Sociais </h2>
+        <p> Instagram: <a href="https://www.Instagram.com/brenoslv7_">@brenoslv7_</a> </p>
+        <p> Github: <a href="https://github.com/brenoslv77">@brenoslv77</a> </p>
+        <p> Linkedin: <a href="https://www.linkedin.com/in/brenoslv77/">@brenoslv77</a> </p> 
+      </section>
+    </main>
+
+         <!-- rodapé -->
+    <footer> Site desenvolvido pela turma de IoT01 </footer>
+
+    </boby>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script src="env.js"></script>
+ <script src="script.js"></script>
+</html>

@@ -1,0 +1,211 @@
+/*
+O CSS (Cascading Style Sheets) Serve para definir o estilo visual do HTML
+Ele trabalha três partes principais:
+- SELETORES: Oque será estilizado ( ex: body, h1, classe, #id)
+- PROPRIEDADES: Oque será alterado ( ex: color, font-size)
+- VALOR: o novo estilo ( ex: blue, 20px)
+*/
+ 
+ 
+/*
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+ font-family: "Covered By Your Grace", cursive;
+*/
+ 
+ 
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+ 
+ 
+/* o seletor universal (*) aplica o estilo para TODOS os elementos da página.
+aqui usamos para remover a margem
+*/
+*{
+    margin: 0;
+    padding: 0;
+}
+ 
+ 
+body{
+/* tipo de fonte do site */
+  font-family: "Playpen Sans", cursive;
+/* cor de fundo */
+    background-color: #ffffff;
+/* cor da fonte */
+    color: #000000;
+/* altura da linha */
+    line-height: 1.6;
+}
+ 
+ 
+/*
+Personalizar seleção de texto
+*/
+ 
+ 
+::selection{
+    background-color: #00000000;
+    color: #0066ffdc;
+}
+ 
+ 
+/*
+TITULOS, TEXTOS E LINHAS
+*/
+ 
+ 
+/*
+Seleciona todas as tags (h1, h2, h3) utilizam os títulos
+*/
+ 
+h1 {
+/* espaçamento inferior */
+    margin-bottom: 10px;
+/* altura da linha */
+    line-height: 1.25;
+/* tamanho da fonte */
+    font-size: 3rem;
+/* cor da fonte */
+    color: #ffffff;
+/* bilho da sombra */
+    text-shadow: 2px 2px 4px #57565600;
+}
+ 
+ 
+h2 {
+    margin-bottom: 10px;
+    line-height: 1.25;
+    font-size: 1.5rem;
+    color: #000000c2;
+}
+ 
+h3 {
+    margin-bottom: 10px;
+    line-height: 1.25;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+ 
+/* tag <p></p> serve para criar um paragrafo dentro da pagina */
+p {
+/* espaçamento inferior */
+    margin-bottom: 15px;
+/* cor da fonte */
+    color : #000000c2;
+}
+ 
+a {
+/* cor da fonte */  
+    color: #ffa600;
+    /* decoração do meu texto --> o nome tira o sublinhado */
+    text-decoration: none;
+    /* criar uma transição ao paassar o mouse */
+    transition: color 0.2s;
+}
+ 
+ 
+/* o estado :hover é acionado quando o usuário passa o mouse */
+a:houver{
+    color: #0066ffdc;
+}
+ 
+ 
+/*
+CABEÇALHO E MENU DE NAVEGAÇÃO
+*/
+ 
+header {
+/* o linear-gradient cria um efeito degradê, passamos o angulo
+e depois as cores com a porcentagem que elas vão ocupar */
+    background: linear-gradient(90deg, #ffa600 0%, #ffa60083 100%);
+/* espaçamento dentro do header */
+     padding:  10px 10px;
+/* alinhamento de texto */
+     text-align:  center;
+/* criar uma sombra  */
+    box-shadow: 0 4px 10px rgb(255, 255, 255);
+}
+ 
+ 
+nav {
+ 
+    background-color: #dfded7;
+/* borda superior -> 1px (espressura), solid (o tipo de borda), cor  */
+    border-top: 4px solid #000000;
+/* borda inferior -> 1px (espressura), solid (o tipo de borda), cor  */
+    border-bottom: 4px solid #000000c2;
+/* a position define a posição que o elemento vai ser exibido, */
+    /* nessa caso o sticky deixa o meu fixo no topo */
+    position: sticky;
+    top: 0;
+}
+ 
+/* alterando a lista que está dentro do nav */
+nav ul {
+    /* vai deixar os links lado a lado */
+    display: flex;
+    /* alinhamento horizontal  */
+    justify-content: space-around;
+    /* remove os pontinhos da listas */
+    list-style: none;
+    padding: 10px 0;
+}
+ 
+nav a {
+    color: #006effc2;
+    padding: 6px 14px;
+    /* para deixar as bordas (os cantos) arrendodados, usamos border-radius */
+    border-radius: 50px;
+}
+ 
+nav a:hover {
+    background-color: #ffa60000;
+    color: #ffa600;
+}
+ 
+ 
+/*
+ESTRUTURA PRINCIPAL E SEÇÕES
+*/
+ 
+main {
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+ 
+ 
+/*
+Cada <section> funciona como um card visual
+*/
+ 
+main > section {
+    background-color: #ffffff3b;
+    border-radius: 34px;
+    box-shadow: 0 3px 10px #ffa600;
+    padding: 54px;
+    margin-bottom: 24px;
+}
+ 
+ 
+/*
+IMAGEMS
+*/
+ 
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: #000000c2 1px solid;
+    margin-bottom: 14px;
+}
+ 
+ 
+/*
+FORMULÁRIOS
+*/
+ 
+form {
+/* espaça todos os campos verticalmente */
+    display: grid;
+    gap: 12px;
+}
