@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    /*tipo de fonte do site*/
+    font-family: "Noto Sans Display", sans-serif;
+    /* cor de fundo */
+    background-color: #ffffff;
+    /* cor da fonte */
+    color: #000000;
+    /* altura das linhas */
+    line-height: 1.6;
+}
+
+
+::selection{
+    background-color: #0084ff8a;
+    color: #ffffff;
+}
+
+
+h1 {
+    /* espaçamento inferior*/
+    margin-bottom: 10px;
+    /* altura da linha */
+    line-height: 1.25;
+    /* tamanho da fonte */
+    font-size: 2.4rem;
+    /* cor da fonte */
+    color: #020202;
+    /* brilho de sombra */
+    text-shadow: 0 0 10px #00000042;
+}
+
+h2 {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 2.0rem;
+    color: #fcac00de;
+}
+
+p{
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+a {
+    color: #ffffff2d;
+    text-decoration: none;
+    transition: color 1.0s;
+}
+
+a:hover{
+    color: #fcac00de;
+}
+
+header{
+    background: linear-gradient(90deg, #fcac002c 0%, #fcac00a2 100%);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+
+main > section{
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 14px;
+    box-shadow: 0 0 20px (rgba(255, 230, 1, 0.08));
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+img{
+    max-width: 100%; 
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    margin-bottom: 14px;
+}
